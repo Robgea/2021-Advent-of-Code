@@ -4,9 +4,7 @@ def num_getter():
 	with open("nums.csv", encoding='utf-8') as raw_csv:
 		csv_read = csv.reader(raw_csv)
 		csv_list = list(csv_read)
-		print(csv_list[0])
 		csv_list.pop(0)
-		print(csv_list[0])
 		return_list = [int(row[0]) for row in csv_list]
 
 	return return_list
